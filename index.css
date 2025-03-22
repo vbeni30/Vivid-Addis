@@ -574,6 +574,9 @@
     .exhibitions-grid, .artists-grid, .workshops-grid {
         grid-template-columns: 1fr;
     }
+
+  .nav-container {
+            max-width: 480px;
 }
 
 /* Mobile Menu Styles */
