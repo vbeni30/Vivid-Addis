@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Vivid Addis</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+   <link rel="stylesheet" href="events.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Vivid Addis</div>
+            <div class="nav-links">
+    <a href="../index.html">Home</a>
+    <a href="../about/about.html">About</a>
+    <a href="../galleries/galleries.html">Galleries</a>
+    <a class="active" href="events.html">Events</a>
+    <a href="../magazine/magazine.html">Magazine</a>
+    <a href="../contact/contact.html">Contact</a>
+</div>
+
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-subtitle">Upcoming Events</div>
+            <h1 class="hero-title">Experience Art in Action</h1>
+            <p class="hero-description">
+                Join us for a series of inspiring exhibitions, workshops, and cultural events celebrating Ethiopian art and creativity.
+            </p>
+            <a href="#events" class="btn">Explore Events →</a>
+        </div>
+    </section>
+
+    <section id="events" class="events-section">
+        <div class="events-container">
+            <h2 class="section-title">Our Events</h2>
+            <p class="section-subtitle">Discover the vibrant world of Ethiopian art through our curated events</p>
+            <div class="events-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="exhibition">Exhibitions</button>
+                <button class="filter-btn" data-filter="workshop">Workshops</button>
+                <button class="filter-btn" data-filter="talk">Artist Talks</button>
+                <button class="filter-btn" data-filter="cultural">Cultural Events</button>
+            </div>
+            <div class="events-grid">
+                <div class="event-card" data-category="exhibition">
+                    <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Contemporary Visions Exhibition" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">July 15 - August 30, 2025</div>
+                        <h3 class="event-title">Contemporary Visions Exhibition</h3>
+                        <p class="event-description">Explore the cutting-edge works of emerging Ethiopian artists in this thought-provoking exhibition.</p>
+                        <div class="event-footer">
+                            <span class="event-location"><i class="fas fa-map-marker-alt"></i> Vivid Addis Gallery</span>
+                            <a href="#" class="event-rsvp">RSVP Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card" data-category="workshop">
+                    <img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80" alt="Traditional Painting Techniques Workshop" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">August 5, 2025</div>
+                        <h3 class="event-title">Traditional Painting Techniques Workshop</h3>
+                        <p class="event-description">Learn the art of traditional Ethiopian painting from master artist Kidist Tekle.</p>
+                        <div class="event-footer">
+                            <span class="event-location"><i class="fas fa-map-marker-alt"></i> Vivid Addis Studio</span>
+                            <a href="#" class="event-rsvp">Register</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card" data-category="talk">
+                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Artist Talk: Aida Muluneh" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">September 12, 2025</div>
+                        <h3 class="event-title">Artist Talk: Aida Muluneh</h3>
+                        <p class="event-description">Join us for an inspiring evening with renowned photographer Aida Muluneh as she discusses her creative process.</p>
+                        <div class="event-footer">
+                            <span class="event-location"><i class="fas fa-map-marker-alt"></i> Vivid Addis Auditorium</span>
+                            <a href="#" class="event-rsvp">Get Tickets</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card" data-category="cultural">
+                    <img src="https://images.unsplash.com/photo-1528747045269-390fe33c19f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Ethiopian Coffee Ceremony" class="event-image">
+                    <div class="event-content">
+                        <div class="event-date">October 1, 2025</div>
+                        <h3 class="event-title">Ethiopian Coffee Ceremony</h3>
+                        <p class="event-description">Experience the rich tradition of the Ethiopian coffee ceremony while enjoying contemporary art.</p>
+                        <div class="event-footer">
+                            <span class="event-location"><i class="fas fa-map-marker-alt"></i> Vivid Addis Courtyard</span>
+                            <a href="#" class="event-rsvp">Join Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-event">
+        <div class="featured-container">
+            <div class="featured-image">
+                <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Vivid Addis Art Festival">
+            </div>
+            <div class="featured-info">
+                <h2 class="section-title">Featured Event</h2>
+                <div class="featured-date">November 15-20, 2025</div>
+                <h3 class="featured-title">Vivid Addis Art Festival</h3>
+                <p class="featured-description">
+                    Join us for a week-long celebration of Ethiopian art and culture. Experience exhibitions, live performances, workshops, and more in this immersive festival.
+                </p>
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="countdown-days">00</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="countdown-hours">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="countdown-minutes">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="countdown-seconds">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+                <a href="#" class="btn">Learn More & Register →</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Host Your Event with Us</h2>
+            <p class="cta-description">Looking for a unique venue for your art-related event? Our spaces are available for rent.</p>
+            <a href="#" class="btn">Inquire About Venues →</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3 class="footer-heading">Vivid Addis</h3>
+                <p>Celebrating contemporary Ethiopian art and artists.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="galleries.html">Galleries</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="footer-heading">Contact</h3>
+                <p>Email: info@vividaddis.com</p>
+                <p>Phone: +251 930905014</p>
+                <p>Address: Bole, Addis Ababa, Ethiopia</p>
+            </div>
+            <div>
+                <h3 class="footer-heading">Newsletter</h3>
+                <p>Stay updated with our latest events and exhibitions.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" class="newsletter-input" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 Vivid Addis. All rights reserved.
+        </div>
+    </footer>
+
+    <div class="event-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-date"></p>
+            <p id="modal-description"></p>
+            <p id="modal-location"></p>
+            <a href="#" id="modal-rsvp" class="btn">RSVP</a>
+        </div>
+    </div>
+
+    <div class="mobile-menu-overlay"></div>
+<div class="mobile-menu">
+    <button class="mobile-menu-close">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="mobile-menu-links">
+         <a href="../index.html">Home</a>
+    <a href="../about/about.html">About</a>
+    <a href="../galleries/galleries.html">Galleries</a>
+    <a class="active" href="events.html">Events</a>
+    <a href="../magazine/magazine.html">Magazine</a>
+    <a href="../contact/contact.html">Contact</a>
+    </div>
+    <div class="mobile-menu-social">
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+    </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+   <script src="events.js"></script>
+</body>
+</html>
+
