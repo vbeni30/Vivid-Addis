@@ -153,6 +153,83 @@
             cursor: pointer;
         }
 
+        .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background: var(--bg-secondary);
+    z-index: 1001;
+    padding: 5rem 2rem 2rem;
+    box-shadow: var(--shadow-lg);
+    transition: right 0.3s ease;
+    overflow-y: auto;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.mobile-menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mobile-menu-links a {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    transition: color 0.3s ease;
+}
+
+.mobile-menu-links a:hover,
+.mobile-menu-links a.active {
+    color: var(--accent);
+}
+
+.mobile-menu-social {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
         .hero {
             height: 100vh;
             display: flex;
@@ -1815,6 +1892,26 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
+    <div class="mobile-menu-overlay"></div>
+<div class="mobile-menu">
+    <button class="mobile-menu-close">
+        <i class="fas fa-times"></i>
+    </button>
+    <div class="mobile-menu-links">
+        <a href="index.html">Home</a>
+        <a class="active" href="about.html">About</a>
+        <a href="galleries.html">Galleries</a>
+        <a href="events.html">Events</a>
+        <a href="magazine.html">Magazine</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div class="mobile-menu-social">
+        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+    </div>
+</div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         // Initialize AOS animation library
@@ -1948,14 +2045,34 @@
                 }
             });
 
-            // Mobile menu toggle
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const navLinks = document.querySelector('.nav-links');
-            
-            mobileMenuBtn.addEventListener('click', function() {
-                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            });
+            // Mobile menu functionality
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenuClose = document.querySelector('.mobile-menu-close');
+const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu-links a');
+
+function openMobileMenu() {
+    mobileMenu.classList.add('active');
+    mobileMenuOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMobileMenu() {
+    mobileMenu.classList.remove('active');
+    mobileMenuOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+mobileMenuBtn.addEventListener('click', openMobileMenu);
+mobileMenuClose.addEventListener('click', closeMobileMenu);
+mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+});
         });
     </script>
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
 </html>
+
