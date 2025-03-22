@@ -29,6 +29,7 @@
 
         .navbar {
             position: fixed;
+            max-width:100%;
             width: 100%;
             top: 0;
             z-index: 1000;
